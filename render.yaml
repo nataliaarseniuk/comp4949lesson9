@@ -3,4 +3,4 @@ services:
     name: weather-mcp
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python weather_tools_server.py"
+    startCommand: "uvicorn weather_tools_server:app --host 0.0.0.0 --port $PORT"
